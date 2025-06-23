@@ -145,7 +145,7 @@ body {
     z-index: 2;
     pointer-events: none;
     opacity: 1;
-    transition: opacity 0.4s;
+    transition: opacity 0.8s;
 }
 .about-text {
     position: absolute;
