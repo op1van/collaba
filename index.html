@@ -6,22 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
-const variants = [
-    ['community', 'over', 'industry'],
-    ['curation', 'over', 'strict contracts'],
-    ['self-joy', 'over', 'pretentiousness']
-];
-
-const container = document.getElementById('dynamic-text');
-const pick = variants[Math.floor(Math.random() * variants.length)];
-
-container.innerHTML = `
-    <div>${pick[0]}</div>
-    <div>${pick[1]}</div>
-    <div>${pick[2]}</div>
-`;
-</script>
 <body>
     <!-- Верхнее левое меню -->
     <nav class="top-left">
@@ -51,7 +35,7 @@ container.innerHTML = `
             <div class="spacer"></div>
             <div>perfection</div>
         </div>
-        <!-- co-creation / Isolation -->
+        <!-- co-creation / isolation -->
         <div class="center-text">
             <div>co-creation</div>
             <div class="spacer"></div>
@@ -63,18 +47,36 @@ container.innerHTML = `
                 over over over over over over over over over over over over over over over over over over over over over over over over
             </div>
         </div>
-      <div class="about-text">
-    <p>cllb is a music community-label — curation, distribution, and artist care, powered by a DIY crew. this isn’t a platform — it’s a movement</p>
-    <p>from demos to drops, from weird ideas to posters on Paris walls — the community’s got your back</p>
-</div>
-
-
-        <!-- community / over / industry -->
-        <div class="bottom-center-text">
-            <div>community</div>
-            <div>over</div>
-            <div>industry</div>
+        <!-- Меняющийся блок -->
+        <div class="bottom-center-text" id="dynamic-text"></div>
+        <!-- Описание -->
+        <div class="about-text">
+            <p>cllb is a music community-label — curation, distribution, and artist care, powered by a DIY crew. this isn’t a platform — it’s a movement</p>
+            <p>from demos to drops, from weird ideas to posters on Paris walls — the community’s got your back</p>
         </div>
     </main>
+    <script>
+    const variants = [
+        ['community', 'over', 'industry'],
+        ['curation', 'over', 'strict contracts'],
+        ['self-joy', 'over', 'pretentiousness']
+    ];
+
+    const container = document.getElementById('dynamic-text');
+    let current = 0;
+
+    function showNextVariant() {
+        const pick = variants[current];
+        container.innerHTML = `
+            <div>${pick[0]}</div>
+            <div>${pick[1]}</div>
+            <div>${pick[2]}</div>
+        `;
+        current = (current + 1) % variants.length;
+    }
+
+    showNextVariant();
+    setInterval(showNextVariant, 5000);
+    </script>
 </body>
 </html>
