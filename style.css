@@ -71,7 +71,7 @@ body {
 }
 .side-text {
     position: absolute;
-    left: 0;
+    left: 40px;        /* теперь так же как меню */
     top: 250px;
     display: flex;
     flex-direction: column;
@@ -85,4 +85,6 @@ body {
     pointer-events: none;
 }
 .side-text .spacer {
-    height: 1em; /* пустая строка между curation и contract*
+    height: 1em;
+}
+
