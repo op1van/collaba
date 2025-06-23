@@ -61,14 +61,12 @@ body {
     font-size: 16px;
     vertical-align: middle;
 }
-
 .main-content {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     position: relative;
 }
-
 .side-text {
     position: absolute;
     left: 40px;
@@ -84,7 +82,6 @@ body {
     z-index: 2;
     pointer-events: none;
 }
-
 .center-text {
     position: absolute;
     left: 50%;
@@ -101,18 +98,16 @@ body {
     z-index: 2;
     pointer-events: none;
 }
-
 .side-text .spacer,
 .center-text .spacer {
     height: 1em;
 }
 
-/* --- Бегущая строка между первой и второй строкой текста --- */
+/* --- Бегущая строка строго 300px от верха --- */
 .marquee-container {
     position: absolute;
     left: 0;
-    /* top = верхняя координата текстовых блоков + высота первой строки */
-    top: calc(200px + 1.1em); /* 1.1em чтобы чуть ниже первой строки и чуть выше второй */
+    top: 300px;
     width: 100vw;
     height: 64px;
     overflow: hidden;
