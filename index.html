@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+    <script>
+const variants = [
+    ['community', 'over', 'industry'],
+    ['curation', 'over', 'strict contracts'],
+    ['self-joy', 'over', 'pretentiousness']
+];
+
+const container = document.getElementById('dynamic-text');
+const pick = variants[Math.floor(Math.random() * variants.length)];
+
+container.innerHTML = `
+    <div>${pick[0]}</div>
+    <div>${pick[1]}</div>
+    <div>${pick[2]}</div>
+`;
+</script>
 <body>
     <!-- Верхнее левое меню -->
     <nav class="top-left">
