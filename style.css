@@ -107,7 +107,7 @@ body {
 .marquee-container {
     position: absolute;
     left: 0;
-    top: 250px;
+    top: 267px;
     width: 100vw;
     height: 64px;
     overflow: hidden;
@@ -117,6 +117,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 
 .marquee {
     display: inline-block;
