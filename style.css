@@ -64,11 +64,11 @@ body {
     font-size: 16px;
     vertical-align: middle;
 }
-/* Центральная обертка */
+/* Центрированная горизонтальная линия */
 .main-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     height: 100vh;
     width: 100vw;
@@ -77,38 +77,45 @@ body {
     top: 0;
     pointer-events: none; /* чтобы меню были кликабельны */
 }
-.center-wrap {
+.centered-line {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     pointer-events: none;
 }
-/* Левый текст */
+/* Левый текст без фона, поверх бегущей строки */
 .side-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    position: absolute;
+    left: 64px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 64px;
-    margin-right: 40px;
-    margin-left: 64px;
-    line-height: 1.1;
+    font-weight: normal;
     color: #111;
+    line-height: 1.2;
+    z-index: 2;
     pointer-events: none;
+    background: transparent;
+    white-space: pre-line;
 }
-.side-text br {
-    line-height: 1.8;
-}
-/* Бегущая строка */
+/* Бегущая строка во всю ширину, без отступов */
 .marquee-container {
-    width: 65vw;
-    min-width: 400px;
+    width: 100vw;
     overflow: hidden;
     white-space: nowrap;
     pointer-events: none;
-    /* Поднимаем на один уровень выше для правильного выравнивания */
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1em;
     display: flex;
     align-items: center;
 }
@@ -116,8 +123,10 @@ body {
     display: inline-block;
     font-size: 64px;
     font-weight: normal;
-    animation: marquee 10s linear infinite;
     color: #111;
+    line-height: 1;
+    animation: marquee 10s linear infinite;
+    will-change: transform;
 }
 @keyframes marquee {
     0% {
