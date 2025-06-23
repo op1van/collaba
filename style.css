@@ -62,17 +62,17 @@ body {
     vertical-align: middle;
 }
 
-/* --- Новый блок --- */
 .main-content {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     position: relative;
 }
+
 .side-text {
     position: absolute;
-    left: 40px;        /* теперь так же как меню */
-    top: 250px;
+    left: 40px;
+    top: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -84,7 +84,23 @@ body {
     z-index: 2;
     pointer-events: none;
 }
-.side-text .spacer {
+.center-text {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 64px;
+    font-weight: normal;
+    color: #111;
+    line-height: 1.05;
+    background: transparent;
+    z-index: 2;
+    pointer-events: none;
+}
+.side-text .spacer,
+.center-text .spacer {
     height: 1em;
 }
-
