@@ -64,7 +64,7 @@ body {
     font-size: 16px;
     vertical-align: middle;
 }
-/* Центральная бегущая строка */
+/* Центральная обертка */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -77,11 +77,40 @@ body {
     top: 0;
     pointer-events: none; /* чтобы меню были кликабельны */
 }
-.marquee-container {
+.center-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
+    pointer-events: none;
+}
+/* Левый текст */
+.side-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 64px;
+    margin-right: 40px;
+    margin-left: 64px;
+    line-height: 1.1;
+    color: #111;
+    pointer-events: none;
+}
+.side-text br {
+    line-height: 1.8;
+}
+/* Бегущая строка */
+.marquee-container {
+    width: 65vw;
+    min-width: 400px;
     overflow: hidden;
     white-space: nowrap;
     pointer-events: none;
+    /* Поднимаем на один уровень выше для правильного выравнивания */
+    display: flex;
+    align-items: center;
 }
 .marquee {
     display: inline-block;
