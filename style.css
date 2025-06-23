@@ -62,25 +62,20 @@ body {
     vertical-align: middle;
 }
 
-/* --- Центрирование текста --- */
+/* --- Новый блок --- */
 .main-content {
-    position: fixed;
-    left: 0; top: 0;
-    width: 100vw; height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
+    position: relative;
 }
 .side-text {
+    position: absolute;
+    left: 0;
+    top: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    position: absolute;
-    left: 64px;
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 64px;
     font-weight: normal;
     color: #111;
@@ -90,5 +85,4 @@ body {
     pointer-events: none;
 }
 .side-text .spacer {
-    height: 1em; /* пустая строка между curation и contracts */
-}
+    height: 1em; /* пустая строка между curation и contract*
