@@ -64,19 +64,28 @@
 
     const container = document.getElementById('dynamic-text');
     let current = 0;
+    let isAnimating = false;
 
     function showNextVariant() {
-        const pick = variants[current];
-        container.innerHTML = `
-            <div>${pick[0]}</div>
-            <div>${pick[1]}</div>
-            <div>${pick[2]}</div>
-        `;
-        current = (current + 1) % variants.length;
+        if (isAnimating) return;
+        isAnimating = true;
+        container.style.opacity = 0;
+
+        setTimeout(() => {
+            const pick = variants[current];
+            container.innerHTML = `
+                <div>${pick[0]}</div>
+                <div>${pick[1]}</div>
+                <div>${pick[2]}</div>
+            `;
+            current = (current + 1) % variants.length;
+            container.style.opacity = 1;
+            isAnimating = false;
+        }, 400); // должно совпадать с transition
     }
 
     showNextVariant();
-    setInterval(showNextVariant, 5000);
+    setInterval(showNextVariant, 2000);
     </script>
 </body>
 </html>
