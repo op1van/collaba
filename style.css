@@ -150,3 +150,19 @@ body {
     z-index: 2;
     pointer-events: none;
 }
+
+.about-text {
+    position: absolute;
+    left: 40px;            /* как у feeeling */
+    bottom: 300px;
+    max-width: 550px;
+    font-size: 17px;       /* как меню */
+    color: #222;
+    line-height: 1.5;
+    z-index: 2;
+    background: transparent;
+    pointer-events: none;
+}
+.about-text p {
+    margin: 0 0 14px 0;
+}
