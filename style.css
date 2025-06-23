@@ -154,7 +154,7 @@ body {
 .about-text {
     position: absolute;
     left: 40px;            /* как у feeeling */
-    bottom: 200px;
+    bottom: 0;
     max-width: 550px;
     font-size: 17px;       /* как меню */
     color: #222;
@@ -166,4 +166,5 @@ body {
 .about-text p {
     margin: 0 0 14px 0;
 }
+
 
