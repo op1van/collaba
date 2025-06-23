@@ -138,10 +138,10 @@ body {
     position: absolute;
     left: 50%;
     bottom: 24px;
-    transform: translateX(-50%);
+    /* УБИРАЕМ transform! */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Только левый край */
     font-size: 64px;
     font-weight: normal;
     color: #111;
