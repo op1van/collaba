@@ -4,9 +4,8 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background: #fff;
     width: 100vw;
-    height: 100vh;
+    background: #fff;
 }
 body {
     min-height: 100vh;
@@ -14,18 +13,33 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+.screen {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+.first-screen {
+    background: #fff;
+}
+.second-screen {
+    background: #000;
+}
 .top-left {
     position: fixed;
     top: 24px;
     left: 40px;
     display: flex;
     gap: 30px;
-    z-index: 10;
+    z-index: 100;
+    transition: color 0.4s;
 }
 .top-left a, .top-left span {
     color: #222;
     text-decoration: none;
     font-size: 17px;
+    transition: color 0.4s;
 }
 .top-left .inactive {
     color: #bbb;
@@ -36,12 +50,14 @@ body {
     right: 40px;
     display: flex;
     gap: 32px;
-    z-index: 10;
+    z-index: 100;
+    transition: color 0.4s;
 }
 .top-right a {
     color: #222;
     text-decoration: none;
     font-size: 17px;
+    transition: color 0.4s;
 }
 .bottom-left {
     position: fixed;
@@ -49,8 +65,9 @@ body {
     bottom: 24px;
     display: flex;
     gap: 30px;
-    z-index: 10;
+    z-index: 100;
     font-size: 17px;
+    transition: color 0.4s;
 }
 .bottom-left a {
     color: #222;
@@ -61,6 +78,11 @@ body {
     font-size: 16px;
     vertical-align: middle;
 }
+/* Белое меню на черном фоне */
+.white-menu a, .white-menu span, .white-menu {
+    color: #fff !important;
+}
+/* Основной контент первого экрана */
 .main-content {
     width: 100vw;
     height: 100vh;
@@ -133,7 +155,6 @@ body {
     position: absolute;
     left: 50%;
     bottom: 24px;
-    /* ВЫРАВНИВАНИЕ ТОЛЬКО ПО ЛЕВОМУ КРАЮ! */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -161,4 +182,9 @@ body {
 }
 .about-text p {
     margin: 0 0 14px 0;
+}
+
+/* Для плавного скролла */
+html {
+    scroll-behavior: smooth;
 }
