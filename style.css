@@ -61,14 +61,13 @@ body {
     font-size: 16px;
     vertical-align: middle;
 }
-
 .main-content {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
     position: relative;
 }
-
+/* Блоки curation / contracts и weird / polished */
 .side-text {
     position: absolute;
     left: 40px;
@@ -103,4 +102,43 @@ body {
 .side-text .spacer,
 .center-text .spacer {
     height: 1em;
+}
+/* ---- Бегущая строка по центру экрана ---- */
+.marquee-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    height: 64px;
+    transform: translateY(-50%);
+    overflow: hidden;
+    z-index: 3;
+    pointer-events: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 64px;
+    font-weight: normal;
+    color: #111;
+    line-height: 1;
+    will-change: transform;
+    animation: marquee 12s linear infinite;
+}
+.marquee2 {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    animation: marquee2 12s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translateX(0%);}
+    100% { transform: translateX(-100%);}
+}
+@keyframes marquee2 {
+    0%   { transform: translateX(0%);}
+    100% { transform: translateX(-100%);}
 }
