@@ -72,5 +72,5 @@ body::-webkit-scrollbar {
     z-index: 2;
     pointer-events: none;
     opacity: 1;
-    transition: opacity 2.5s;
+    transition: opacity 0.8s;
 }
