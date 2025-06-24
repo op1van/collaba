@@ -11,8 +11,8 @@
 
 <body class="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth">
     <div class="fixed inset-0 pointer-events-none z-50">
-        <div class="absolute top-0 left-0 p-4 pointer-events-auto">
-            <nav class="top-left fixed top-6 left-10  z-[100] transition-colors duration-400" id="main-menu">
+        <div class="absolute px-10 py-4 pointer-events-auto">
+            <nav class="z-[100] transition-colors duration-400" id="main-menu">
                 <div class="gap-[30px] hidden lg:flex">
                     <a href="#first-screen" class="inactive"
                         class="text-[#222] no-underline text-[17px] transition-colors duration-400">start</a>
@@ -21,38 +21,18 @@
                     <a href="#third-screen"
                         class="text-[#222] no-underline text-[17px] transition-colors duration-400">contacts</a>
                 </div>
+                <div class="flex lg:hidden">
+                    <nav class="flex flex-col z-[100] transition-colors duration-400">
+                        <a href="#" class="text-white no-underline text-[20px]">download media kit <span
+                                class="ml-1">↗</span></a>
+                        <a href="#" class="text-white no-underline text-[20px]">share your demo <span
+                                class="ml-1">↗</span></a>
+                    </nav>
+                </div>
             </nav>
-            <div class="flex lg:hidden absolute top-8 left-5 p-2">
-                <input type="checkbox" id="menu-toggle" class="peer hidden" />
-
-                <label for="menu-toggle" class="cursor-pointer block">
-                    <div class="w-6 h-0.5 bg-black mb-1"></div>
-                    <div class="w-6 h-0.5 bg-black mb-1"></div>
-                    <div class="w-6 h-0.5 bg-black"></div>
-                </label>
-
-
-                <nav
-                    class="fixed inset-0 bg-[#FBFF00] text-black flex flex-col opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition-opacity duration-300 md:hidden">
-                    <label for="menu-toggle"
-                        class="absolute top-6 left-6 cursor-pointer text-black text-5xl leading-none select-none">
-                        &times;
-                    </label>
-                    <div class="mt-[120px] flex flex-col p-8">
-                        <a href="#" class="mb-6 text-2xl">what is cllb</a>
-                        <a href="#" class="mb-6 text-2xl">contacts</a>
-                        <div class="h-[40px]"></div>
-                        <a href="#" class="mb-6 text-2xl">inst</a>
-                        <a href="#" class="mb-6 text-2xl">tg</a>
-                        <a href="#" class="mb-6 text-2xl">soundcloud</a>
-                        <a href="#" class="mb-6 text-2xl">twitch</a>
-                        <a href="#" class="mb-6 text-2xl">youtube</a>
-                    </div>
-                </nav>
-            </div>
         </div>
 
-        <div class="absolute top-0 right-0 p-4 flex items-center pointer-events-auto">
+        <div class="absolute top-0 right-0 px-10 py-4 flex items-center pointer-events-auto">
             <nav class="flex z-[100] transition-colors duration-400" id="social-menu">
                 <div class="hidden lg:flex gap-8">
                     <a href="#"
@@ -63,31 +43,26 @@
                     <a href="#" class="text-[#222] no-underline text-[17px] transition-colors duration-400">twitch</a>
                     <a href="#" class="text-[#222] no-underline text-[17px] transition-colors duration-400">youtube</a>
                 </div>
-                <div class="flex lg:hidden p-2">
-                    <nav class="flex gap-8 z-[100] transition-colors duration-400">
-                        <a href="#" class="text-[#222] no-underline text-[20px]">share your demo <span
-                                class="ml-1 text-[20px] align-middle">↗</span></a>
-                    </nav>
-                </div>
             </nav>
         </div>
 
-        <div class="absolute bottom-6 left-10  pointer-events-auto">
-            <div class="flex gap-[30px] z-[100] text-[17px] transition-colors duration-400" id="bottom-links">
+        <div class="absolute bottom-0 left-0 px-10 py-4 pointer-events-auto">
+            <div class="hidden lg:flex gap-[30px] z-[100] text-[17px] transition-colors duration-400" id="bottom-links">
                 <a href="#" class="text-[#222] no-underline text-[20px] lg:text-[16px]">download media kit <span
-                        class="ml-1 text-[20px] lg:text-[16px] align-middle">↗</span></a>
-                <a href="#" class="text-[#222] no-underline hidden lg:inline">share your demo <span
-                        class="ml-1 text-[16px] align-middle">↗</span></a>
+                        class="ml-1">↗</span></a>
+                <a href="#" class="text-[#222] no-underline">share your demo <span
+                        class="ml-1">↗</span></a>
             </div>
         </div>
 
-        <div class="absolute bottom-0 right-0 p-4 flex pointer-events-auto">
+        <div class="absolute bottom-0 right-0 px-10 py-4 hidden lg:flex pointer-events-auto">
             <img src="assets/cllb.png" class="h-[60px]" id="logo" />
         </div>
     </div>
 
     <!-- Первый экран -->
-    <section class="h-screen snap-start flex items-center justify-center text-white text-4xl" id="first-screen">
+    <section class="h-screen snap-start flex items-center justify-center text-white text-4xl hidden lg:flex"
+        id="first-screen">
         <main class="w-screen h-screen pointer-events-none relative overflow-hidden">
             <div
                 class="absolute left-10 top-[200px] flex flex-col items-start text-[32px] lg:text-[64px] font-normal text-[#111] leading-[1.05] bg-transparent z-2 pointer-events-none">
@@ -125,14 +100,14 @@
     <!-- Второй экран -->
     <section class="h-screen snap-start flex text-white relative" id="second-screen">
         <div
-            class="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center text-white text-center px-10 pt-40 lg:pt-[250px] md:pt-[125px]">
-            <div class="w-full lg:w-1/2 flex pb-[100px] lg:pb-0 h-auto lg:h-full">
+            class="relative z-10 h-full w-full flex flex-col lg:flex-row items-center justify-between :justify-center text-white text-center px-10 lg:pt-[250px] md:pt-[125px]">
+            <div class="w-full lg:w-1/2 flex h-auto lg:h-full pt-[200px] lg:pt-0">
                 <p class="font-normal text-3xl max-w-[208px] text-left">
                     cllb is a music community label
                 </p>
             </div>
             <div
-                class="w-full lg:w-1/2 flex flex-col gap-y-4 lg:gap-y-8 font-normal text-base lg:text-3xl text-left h-auto lg:h-full">
+                class="w-full lg:w-1/2 hidden lg:flex flex-col gap-y-4 lg:gap-y-8 font-normal text-base lg:text-3xl text-left h-auto lg:h-full">
                 <p>
                     artist management, distribution, and curation — powered by a diy
                     ecosystem where everyone is a co-creator
@@ -154,6 +129,27 @@
                     posters on paris walls
                 </p>
             </div>
+            <div class="block lg:hidden z-10 w-full text-left text-[#FBFF00]">
+                <a href="mailto:colabel@collaba.music" target="_blank" rel="noopener noreferrer"
+                    class="font-normal text-3xl lg:text-6xl">
+                    colabel@collaba.music
+                </a>
+            </div>
+            <div class="flex lg:hidden w-full flex-col pb-[34px]">
+                <div class="flex w-full justify-between">
+                    <a href="#" class="no-underline text-[20px] text-[#FBFF00]">instagram <span
+                            class="ml-1">↗</span></a>
+                    <a href="#" class="no-underline text-[20px] text-[#FBFF00]">telegram <span class="ml-1">↗</span></a>
+                </div>
+                <div class="flex w-full justify-between">
+                    <a href="#" class="no-underline text-[20px] text-[#FBFF00]">soundcloud <span
+                            class="ml-1">↗</span></a>
+                    <a href="#" class="no-underline text-[20px] text-[#FBFF00]">twitch <span class="ml-1">↗</span></a>
+                </div>
+                <div class="flex w-full justify-between">
+                    <a href="#" class="no-underline text-[20px] text-[#FBFF00]">youtube <span class="ml-1">↗</span></a>
+                </div>
+            </div>
         </div>
 
         <img src="assets/image_1.png" class="absolute inset-0 w-full h-full object-cover" />
@@ -161,7 +157,7 @@
         <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
     </section>
 
-    <section class="h-screen snap-start flex flex-col text-white relative" id="third-screen">
+    <section class="h-screen snap-start flex flex-col text-white relative hidden lg:flex" id="third-screen">
         <div class="relative z-10 w-full flex flex-col px-10">
             <div
                 class="w-full lg:w-1/2 flex pb-[100px] lg:pb-0 h-auto lg:h-full font-normal text-3xl lg:text-6xl max-w-[570px] text-left pt-[250px]">
