@@ -12,18 +12,16 @@
 <body class="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth">
     <div class="fixed inset-0 pointer-events-none z-50">
         <div class="absolute top-0 left-0 p-4 pointer-events-auto">
-            <div class="p-2">
-                <nav class="top-left fixed top-6 left-10  z-[100] transition-colors duration-400" id="main-menu">
-                    <div class="gap-[30px] hidden lg:flex">
-                        <span class="inactive"
-                            class="text-[#222] no-underline text-[17px] transition-colors duration-400">start</span>
-                        <a href="#second-screen"
-                            class="text-[#222] no-underline text-[17px] transition-colors duration-400">what is cllb</a>
-                        <a href="#"
-                            class="text-[#222] no-underline text-[17px] transition-colors duration-400">contacts</a>
-                    </div>
-                </nav>
-            </div>
+            <nav class="top-left fixed top-6 left-10  z-[100] transition-colors duration-400" id="main-menu">
+                <div class="gap-[30px] hidden lg:flex">
+                    <a href="#first-screen" class="inactive"
+                        class="text-[#222] no-underline text-[17px] transition-colors duration-400">start</a>
+                    <a href="#second-screen"
+                        class="text-[#222] no-underline text-[17px] transition-colors duration-400">what is cllb</a>
+                    <a href="#third-screen"
+                        class="text-[#222] no-underline text-[17px] transition-colors duration-400">contacts</a>
+                </div>
+            </nav>
             <div class="flex lg:hidden absolute top-8 left-5 p-2">
                 <input type="checkbox" id="menu-toggle" class="peer hidden" />
 
@@ -55,48 +53,41 @@
         </div>
 
         <div class="absolute top-0 right-0 p-4 flex items-center pointer-events-auto">
-            <div class="p-2">
-                <nav class="flex z-[100] transition-colors duration-400" id="social-menu">
-                    <div class="hidden lg:flex gap-8">
-                        <a href="#"
-                            class="text-[#222] no-underline text-[17px] transition-colors duration-400">instagram</a>
-                        <a href="#"
-                            class="text-[#222] no-underline text-[17px] transition-colors duration-400">telegram</a>
-                        <a href="#"
-                            class="text-[#222] no-underline text-[17px] transition-colors duration-400">soundcloud</a>
-                        <a href="#"
-                            class="text-[#222] no-underline text-[17px] transition-colors duration-400">twitch</a>
-                    </div>
-                    <div class="flex lg:hidden p-2">
-                        <nav class="flex gap-8 z-[100] transition-colors duration-400">
-                            <a href="#" class="text-[#222] no-underline text-[20px]">share your demo <span
-                                    class="ml-1 text-[20px] align-middle">↗</span></a>
-                        </nav>
-                    </div>
-                </nav>
-            </div>
+            <nav class="flex z-[100] transition-colors duration-400" id="social-menu">
+                <div class="hidden lg:flex gap-8">
+                    <a href="#"
+                        class="text-[#222] no-underline text-[17px] transition-colors duration-400">instagram</a>
+                    <a href="#" class="text-[#222] no-underline text-[17px] transition-colors duration-400">telegram</a>
+                    <a href="#"
+                        class="text-[#222] no-underline text-[17px] transition-colors duration-400">soundcloud</a>
+                    <a href="#" class="text-[#222] no-underline text-[17px] transition-colors duration-400">twitch</a>
+                    <a href="#" class="text-[#222] no-underline text-[17px] transition-colors duration-400">youtube</a>
+                </div>
+                <div class="flex lg:hidden p-2">
+                    <nav class="flex gap-8 z-[100] transition-colors duration-400">
+                        <a href="#" class="text-[#222] no-underline text-[20px]">share your demo <span
+                                class="ml-1 text-[20px] align-middle">↗</span></a>
+                    </nav>
+                </div>
+            </nav>
         </div>
 
-        <div class="absolute bottom-0 left-0 p-4 pointer-events-auto">
-            <div class="p-2">
-                <div class="flex gap-[30px] z-[100] text-[17px] transition-colors duration-400" id="bottom-links">
-                    <a href="#" class="text-[#222] no-underline text-[20px] lg:text-[16px]">download media kit <span
-                            class="ml-1 text-[20px] lg:text-[16px] align-middle">↗</span></a>
-                    <a href="#" class="text-[#222] no-underline hidden lg:inline">share your demo <span
-                            class="ml-1 text-[16px] align-middle">↗</span></a>
-                </div>
+        <div class="absolute bottom-6 left-10  pointer-events-auto">
+            <div class="flex gap-[30px] z-[100] text-[17px] transition-colors duration-400" id="bottom-links">
+                <a href="#" class="text-[#222] no-underline text-[20px] lg:text-[16px]">download media kit <span
+                        class="ml-1 text-[20px] lg:text-[16px] align-middle">↗</span></a>
+                <a href="#" class="text-[#222] no-underline hidden lg:inline">share your demo <span
+                        class="ml-1 text-[16px] align-middle">↗</span></a>
             </div>
         </div>
 
         <div class="absolute bottom-0 right-0 p-4 flex pointer-events-auto">
-            <div class="p-2">
-                <img src="assets/cllb.png" class="h-[60px]" />
-            </div>
+            <img src="assets/cllb.png" class="h-[60px]" id="logo" />
         </div>
     </div>
 
     <!-- Первый экран -->
-    <section class="h-screen snap-start flex items-center justify-center text-white text-4xl">
+    <section class="h-screen snap-start flex items-center justify-center text-white text-4xl" id="first-screen">
         <main class="w-screen h-screen pointer-events-none relative overflow-hidden">
             <div
                 class="absolute left-10 top-[200px] flex flex-col items-start text-[32px] lg:text-[64px] font-normal text-[#111] leading-[1.05] bg-transparent z-2 pointer-events-none">
@@ -117,15 +108,11 @@
                 </div>
             </div>
             <div class="bottom-center-text hidden lg:flex" id="dynamic-text"></div>
-            <div class="about-text">
-                <p>
-                    cllb is a music community-label — curation, distribution, and artist
-                    care, powered by a DIY crew. this isn’t a platform — it’s a movement
-                </p>
-                <p>
-                    from demos to drops, from weird ideas to posters on Paris walls —
-                    the community’s got your back
-                </p>
+            <div
+                class="absolute bottom-20 left-10 max-w-[550px] text-[17px] leading-[20px] text-[#222] z-[2] bg-transparent pointer-events-none flex flex-col gap-2">
+                <p>cllb is a music</p>
+                <p>community</p>
+                <p>label</p>
             </div>
             <div id="random_imgs" class="h-full hidden lg:block">
                 <img src="assets/top_image_1.png" class="absolute w-[300px] h-[225px] object-cover opacity-50" />
@@ -138,7 +125,7 @@
     <!-- Второй экран -->
     <section class="h-screen snap-start flex text-white relative" id="second-screen">
         <div
-            class="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center text-white text-center px-16 pt-40 lg:pt-[250px] md:pt-[125px]">
+            class="relative z-10 h-full flex flex-col lg:flex-row items-center justify-center text-white text-center px-10 pt-40 lg:pt-[250px] md:pt-[125px]">
             <div class="w-full lg:w-1/2 flex pb-[100px] lg:pb-0 h-auto lg:h-full">
                 <p class="font-normal text-3xl max-w-[208px] text-left">
                     cllb is a music community label
@@ -174,15 +161,15 @@
         <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
     </section>
 
-    <section class="h-screen snap-start flex flex-col text-white relative">
-        <div class="relative z-10 w-full flex flex-col px-16">
+    <section class="h-screen snap-start flex flex-col text-white relative" id="third-screen">
+        <div class="relative z-10 w-full flex flex-col px-10">
             <div
                 class="w-full lg:w-1/2 flex pb-[100px] lg:pb-0 h-auto lg:h-full font-normal text-3xl lg:text-6xl max-w-[570px] text-left pt-[250px]">
                 want to collaborate feature or explore more?
             </div>
         </div>
 
-        <div class="pt-[160px] lg:pt-[180px] z-10 w-full px-16 text-[#FBFF00]">
+        <div class="pt-[160px] lg:pt-[180px] z-10 w-full px-10 text-[#FBFF00]">
             <a href="mailto:colabel@collaba.music" target="_blank" rel="noopener noreferrer"
                 class="font-normal text-3xl lg:text-6xl">
                 colabel@collaba.music
@@ -233,9 +220,11 @@
                 document.getElementById("main-menu").classList.add("white-menu");
                 document.getElementById("social-menu").classList.add("white-menu");
                 document.getElementById("bottom-links").classList.add("white-menu");
+                document.getElementById('logo').classList.add('white');
             } else {
                 document.getElementById("main-menu").classList.remove("white-menu");
                 document.getElementById("social-menu").classList.remove("white-menu");
+                document.getElementById('logo').classList.remove('white');
                 document
                     .getElementById("bottom-links")
                     .classList.remove("white-menu");
@@ -321,6 +310,37 @@
         window.addEventListener('touchend', throttle(onTouchEnd, 1000), { passive: true });
 
         scrollToSection(0);
+
+        const menuLinks = document.querySelectorAll('#main-menu a[href^="#"]');
+
+        function debounce(func, wait = 100) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        function onScroll() {
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 50;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    menuLinks.forEach(link => {
+                        link.classList.remove('inactive');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('inactive');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', debounce(onScroll, 100));
     </script>
 </body>
 

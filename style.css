@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
 .white-menu a,
 .white-menu span,
 .white-menu {
-    color: #fff !important;
+    color: #fff;
 }
 
 .marquee-container {
@@ -73,21 +73,4 @@ body::-webkit-scrollbar {
     pointer-events: none;
     opacity: 1;
     transition: opacity 0.8s;
-}
-
-.about-text {
-    position: absolute;
-    left: 40px;
-    bottom: 83px;
-    max-width: 550px;
-    font-size: 17px;
-    color: #222;
-    line-height: 1.5;
-    z-index: 2;
-    background: transparent;
-    pointer-events: none;
-}
-
-.about-text p {
-    margin: 0 0 14px 0;
 }
