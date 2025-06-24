@@ -8,24 +8,23 @@
 </head>
 <body>
     <!-- Верхнее левое меню -->
-    <nav class="top-left" id="main-menu">
-        <span class="inactive">start</span>
-        <a href="#" id="goto-second">what is cllb</a>
-        <a href="#">contacts</a>
-    </nav>
-    <!-- Верхнее правое меню -->
-    <nav class="top-right" id="social-menu">
-        <a href="#">instagram</a>
-        <a href="#">telegram</a>
-        <a href="#">soundcloud</a>
-        <a href="#">twitch</a>
-    </nav>
+     <header class="header">
+         <nav class="top-left" id="main-menu">
+             <span class="inactive">start</span>
+             <a href="#" id="goto-second">what is cllb</a>
+             <a href="#">contacts</a>
+         </nav>
+         <!-- Верхнее правое меню -->
+         <nav class="top-right" id="social-menu">
+             <a href="#">instagram</a>
+             <a href="#">telegram</a>
+             <a href="#">soundcloud</a>
+             <a href="#">twitch</a>
+             <a href="#">youtube</a>
+         </nav>
+     </header>
     <!-- Нижние левые ссылки -->
-    <div class="bottom-left" id="bottom-links">
-        <a href="#">download media kit <span>↗</span></a>
-        <a href="#">share your demo <span>↗</span></a>
-    </div>
-
+    
     <!-- Первый экран -->
     <section class="screen first-screen">
         <main class="main-content">
@@ -46,19 +45,109 @@
             </div>
             <div class="bottom-center-text" id="dynamic-text"></div>
             <div class="about-text">
-                <p>cllb is a music community-label — curation, distribution, and artist care, powered by a DIY crew. this isn’t a platform — it’s a movement</p>
-                <p>from demos to drops, from weird ideas to posters on Paris walls — the community’s got your back</p>
+                <p>cllb is a music</p>
+                   <p>community</p>
+                   <p>label</p>
             </div>
         </main>
+       
+        <footer class="footer">
+            <div class="bottom-left" id="bottom-links">
+                <a href="#">download media kit <img src="./images/icons/Arrow.svg" alt=""></a>
+                <a href="#">share your demo <img src="./images/icons/Arrow.svg" alt="" width="12" height="12"></a>
+            </div>
+            <div class="cllb-logo">
+                <img class="corner-logo" src="./images/cllb.svg" alt="cllb">
+            </div>
+        </footer>
     </section>
-
+    
     <!-- Второй экран -->
     <section class="screen second-screen" id="second-screen">
         <!-- Здесь только меню и ссылки — остальное пусто -->
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
     // Смена текста с fade
+
+    // Массив с локальными путями к гифкам
+// Массив с путями к гифкам
+const gifUrls = [
+  './gifs/dj1.gif',
+  './gifs/dj2.gif',
+  './gifs/dj3.gif'
+];
+
+// Функция создания гифки с конкретным URL
+function createGifWithUrl(gifUrl) {
+  const gif = document.createElement('img');
+  gif.src = gifUrl;
+  gif.classList.add('gif');
+  gif.style.position = 'absolute';
+  gif.style.width = '300px';
+  gif.style.height = 'auto';
+  gif.style.zIndex = '0'; // низкий z-index, чтобы не перекрывать элементы
+  gif.style.pointerEvents = 'none'; // клики будут проходить сквозь гифку
+  gif.style.transition = 'opacity 0.5s ease-in-out'; // плавное появление
+
+  // Размеры гифки
+  const gifWidth = 300;
+  const gifHeight = 250;
+
+  // Рандомные координаты
+  const maxX = window.innerWidth - gifWidth;
+  const maxY = window.innerHeight - gifHeight;
+  const randomX = Math.random() * maxX;
+  const randomY = Math.random() * maxY;
+
+  gif.style.left = `${randomX}px`;
+  gif.style.top = `${randomY}px`;
+
+  // Добавляем гифку на страницу
+  document.body.appendChild(gif);
+
+  // Плавное появление
+  setTimeout(() => {
+    gif.style.opacity = '1';
+  }, 10); // небольшая задержка для корректного срабатывания transition
+
+  // Удаляем гифку через 5 секунд
+//   setTimeout(() => {
+//     gif.style.opacity = '0';
+//     setTimeout(() => gif.remove(), 500);
+//   }, 5000);
+}
+
+// При загрузке страницы показываем все гифки из массива
+window.addEventListener('load', () => {
+  gifUrls.forEach(url => {
+    createGifWithUrl(url);
+  });
+});
+
+
     const variants = [
         ['community', 'over', 'industry'],
         ['curation', 'over', 'strict contracts'],
