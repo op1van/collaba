@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.noise {
+    background: transparent url("./assets/noise.png") repeat 0 0;
+    animation: steps(2) bg-animation 5s infinite;
+}
