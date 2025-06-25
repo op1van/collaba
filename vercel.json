@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/demo",
+      "destination": "https://airtable.com/appl031MqyAXR5RdM/shry6JW7YIlSl8zGc",
+      "permanent": true
+    }
+  ]
+}
