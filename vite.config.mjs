@@ -12,8 +12,11 @@ export default defineConfig({
           title: 'Collaba Project'
         }
       }
-    })
+    }),
   ],
+  optimizeDeps: {
+    include: ['gsap']
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets'

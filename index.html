@@ -13,8 +13,7 @@
         <div class="absolute px-10 py-4 pointer-events-auto">
             <nav class="z-[100] transition-colors duration-400" id="main-menu">
                 <div class="gap-[30px] hidden lg:flex">
-                    <a href="#first-screen" class="inactive"
-                        class="text-[#222] no-underline text-[17px] transition-colors duration-400">start</a>
+                    <a href="#first-screen" class="text-[#222] no-underline text-[17px] transition-colors duration-400">start</a>
                     <a href="#second-screen"
                         class="text-[#222] no-underline text-[17px] transition-colors duration-400">what is cllb</a>
                     <a href="#third-screen"
@@ -59,124 +58,131 @@
         </div>
     </div>
 
-    <!-- Первый экран -->
-    <div class="sections overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-smooth">
-        <section class="h-screen snap-start flex items-center justify-center text-white text-4xl hidden lg:flex"
-                 id="first-screen">
-            <main class="w-screen h-screen pointer-events-none relative overflow-hidden">
+    <swiper-container events-prefix="sections-" class="sections" direction="vertical" scrollbar="true" speed="700" mousewheel-force-to-axis="true">
+        <!-- Первый экран -->
+        <swiper-slide>
+            <section class="snap-section h-screen  flex items-center justify-center text-white text-4xl hidden lg:flex scroll-section"
+                     id="first-screen">
+                <main class="w-screen h-screen pointer-events-none relative overflow-hidden">
+                    <div
+                            class="absolute left-10 top-[200px] flex flex-col items-start text-[32px] lg:text-[64px] font-normal text-[#111] leading-[1.05] bg-transparent z-2 pointer-events-none">
+                        <div>feeeling</div>
+                        <div class="h-[1em]"></div>
+                        <div>perfection</div>
+                    </div>
+                    <div
+                            class="absolute left-1/2 top-[200px] flex flex-col items-start text-[32px] lg:text-[64px] font-normal text-[#111] leading-[1.05] bg-transparent z-[2] pointer-events-none">
+                        <div>co-creation</div>
+                        <div class="h-[1em]"></div>
+                        <div>isolation</div>
+                    </div>
+                    <div class="marquee-container top-[217px] lg:top-[267px]">
+                        <div class="marquee text-[32px] lg:text-[64px]">
+                            over over over over over over over over over over over over over
+                            over over over over over over over over over over over
+                        </div>
+                    </div>
+                    <div class="bottom-center-text hidden lg:flex" id="dynamic-text"></div>
+                    <div
+                            class="absolute bottom-20 left-10 max-w-[550px] text-[17px] leading-[20px] text-[#222] z-[2] bg-transparent pointer-events-none flex flex-col gap-2">
+                        <p>cllb is a music</p>
+                        <p>community</p>
+                        <p>label</p>
+                    </div>
+                    <div id="random_imgs" class="h-full hidden lg:block">
+                        <img alt="" src="assets/top_image_1.png" class="absolute w-[300px] h-[225px] object-cover opacity-50" />
+                        <img alt="" src="assets/top_image_2.png" class="absolute w-[300px] h-[225px] object-cover opacity-50" />
+                        <img alt="" src="assets/top_image_3.png" class="absolute w-[300px] h-[225px] object-cover opacity-50" />
+                    </div>
+                </main>
+            </section>
+        </swiper-slide>
+        <swiper-slide>
+            <!-- Второй экран -->
+            <section class="snap-section h-screen  flex text-white relative scroll-section" id="second-screen">
                 <div
-                        class="absolute left-10 top-[200px] flex flex-col items-start text-[32px] lg:text-[64px] font-normal text-[#111] leading-[1.05] bg-transparent z-2 pointer-events-none">
-                    <div>feeeling</div>
-                    <div class="h-[1em]"></div>
-                    <div>perfection</div>
-                </div>
-                <div
-                        class="absolute left-1/2 top-[200px] flex flex-col items-start text-[32px] lg:text-[64px] font-normal text-[#111] leading-[1.05] bg-transparent z-[2] pointer-events-none">
-                    <div>co-creation</div>
-                    <div class="h-[1em]"></div>
-                    <div>isolation</div>
-                </div>
-                <div class="marquee-container top-[217px] lg:top-[267px]">
-                    <div class="marquee text-[32px] lg:text-[64px]">
-                        over over over over over over over over over over over over over
-                        over over over over over over over over over over over
+                        class="relative z-10 h-full w-full flex flex-col lg:flex-row items-center justify-between text-white text-center px-10 lg:pt-[250px] md:pt-[125px]">
+                    <div class="w-full lg:w-1/2 flex h-auto lg:h-full pt-[200px] lg:pt-0">
+                        <p class="font-normal text-2xl xl:text-3xl max-w-[208px] text-left">
+                            cllb is a music community label
+                        </p>
+                    </div>
+                    <div
+                            class="w-full lg:w-1/2 hidden lg:flex flex-col gap-y-4 lg:gap-y-8 font-normal text-base md:text-2xl 2xl:text-3xl text-left h-auto lg:h-full">
+                        <p>
+                            artist management, distribution, and curation — powered by a diy
+                            ecosystem where everyone is a co-creator
+                        </p>
+
+                        <p>
+                            we release strange, raw, unconventional sounds — and give them
+                            status. no kpis, no majors. just real music, real people, real
+                            community
+                        </p>
+
+                        <p>
+                            this isn’t a platform. it’s a movement this isn’t a contract. it’s a
+                            culture
+                        </p>
+
+                        <p>
+                            we’ve got your back — from demos to drop day, from weird ideas to
+                            posters on paris walls
+                        </p>
+                    </div>
+                    <div class="block lg:hidden z-10 w-full text-left text-[#FBFF00]">
+                        <a href="mailto:colabel@collaba.music" target="_blank" rel="noopener noreferrer"
+                           class="font-normal text-3xl lg:text-6xl">
+                            colabel@collaba.music
+                        </a>
+                    </div>
+                    <div class="flex lg:hidden w-full flex-col pb-[34px]">
+                        <div class="flex w-full justify-between">
+                            <a href="https://www.instagram.com/cllllllllllllb/" class="no-underline text-[20px] text-[#FBFF00]">instagram <span
+                                    class="ml-1">&#8599;</span></a>
+
+                        </div>
+                        <div class="flex w-full justify-between">
+                            <a href="https://soundcloud.com/collaba-707243403" class="no-underline text-[20px] text-[#FBFF00]">soundcloud <span
+                                    class="ml-1">&#8599;</span></a>
+                            <a href="http://twitch.tv/cllllllllllllb/" class="no-underline text-[20px] text-[#FBFF00]">twitch <span class="ml-1">&#8599;</span></a>
+                        </div>
+                        <div class="flex w-full justify-between">
+                            <a href="https://www.youtube.com/@cllllllllllllb" class="no-underline text-[20px] text-[#FBFF00]">youtube <span class="ml-1">&#8599;</span></a>
+                        </div>
                     </div>
                 </div>
-                <div class="bottom-center-text hidden lg:flex" id="dynamic-text"></div>
-                <div
-                        class="absolute bottom-20 left-10 max-w-[550px] text-[17px] leading-[20px] text-[#222] z-[2] bg-transparent pointer-events-none flex flex-col gap-2">
-                    <p>cllb is a music</p>
-                    <p>community</p>
-                    <p>label</p>
-                </div>
-                <div id="random_imgs" class="h-full hidden lg:block">
-                    <img alt="" src="assets/top_image_1.png" class="absolute w-[300px] h-[225px] object-cover opacity-50" />
-                    <img alt="" src="assets/top_image_2.png" class="absolute w-[300px] h-[225px] object-cover opacity-50" />
-                    <img alt="" src="assets/top_image_3.png" class="absolute w-[300px] h-[225px] object-cover opacity-50" />
-                </div>
-            </main>
-        </section>
 
-        <!-- Второй экран -->
-        <section class="h-screen snap-start flex text-white relative" id="second-screen">
-            <div
-                    class="relative z-10 h-full w-full flex flex-col lg:flex-row items-center justify-between text-white text-center px-10 lg:pt-[250px] md:pt-[125px]">
-                <div class="w-full lg:w-1/2 flex h-auto lg:h-full pt-[200px] lg:pt-0">
-                    <p class="font-normal text-2xl xl:text-3xl max-w-[208px] text-left">
-                        cllb is a music community label
-                    </p>
+                <img src="assets/image_1.png" class="absolute inset-0 w-full h-full object-cover" alt="" />
+
+                <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
+            </section>
+        </swiper-slide>
+        <swiper-slide>
+            <!-- Третий экран -->
+            <section class="snap-section h-screen  flex flex-col text-white relative hidden lg:flex scroll-section" id="third-screen">
+                <div class="relative z-10 w-full flex flex-col px-10">
+                    <div
+                            class="w-full lg:w-1/2 flex pb-[100px] lg:pb-0 h-auto lg:h-full font-normal text-3xl lg:text-6xl max-w-[570px] text-left md:pt-[150px] 2xl:pt-[250px]">
+                        want to collaborate feature or explore more?
+                    </div>
                 </div>
-                <div
-                        class="w-full lg:w-1/2 hidden lg:flex flex-col gap-y-4 lg:gap-y-8 font-normal text-base md:text-2xl 2xl:text-3xl text-left h-auto lg:h-full">
-                    <p>
-                        artist management, distribution, and curation — powered by a diy
-                        ecosystem where everyone is a co-creator
-                    </p>
 
-                    <p>
-                        we release strange, raw, unconventional sounds — and give them
-                        status. no kpis, no majors. just real music, real people, real
-                        community
-                    </p>
-
-                    <p>
-                        this isn’t a platform. it’s a movement this isn’t a contract. it’s a
-                        culture
-                    </p>
-
-                    <p>
-                        we’ve got your back — from demos to drop day, from weird ideas to
-                        posters on paris walls
-                    </p>
-                </div>
-                <div class="block lg:hidden z-10 w-full text-left text-[#FBFF00]">
+                <div class="pt-[100px] 2xl:pt-[180px] z-10 w-full px-10 text-[#FBFF00]">
                     <a href="mailto:colabel@collaba.music" target="_blank" rel="noopener noreferrer"
                        class="font-normal text-3xl lg:text-6xl">
                         colabel@collaba.music
                     </a>
                 </div>
-                <div class="flex lg:hidden w-full flex-col pb-[34px]">
-                    <div class="flex w-full justify-between">
-                        <a href="https://www.instagram.com/cllllllllllllb/" class="no-underline text-[20px] text-[#FBFF00]">instagram <span
-                                class="ml-1">&#8599;</span></a>
 
-                    </div>
-                    <div class="flex w-full justify-between">
-                        <a href="https://soundcloud.com/collaba-707243403" class="no-underline text-[20px] text-[#FBFF00]">soundcloud <span
-                                class="ml-1">&#8599;</span></a>
-                        <a href="http://twitch.tv/cllllllllllllb/" class="no-underline text-[20px] text-[#FBFF00]">twitch <span class="ml-1">&#8599;</span></a>
-                    </div>
-                    <div class="flex w-full justify-between">
-                        <a href="https://www.youtube.com/@cllllllllllllb" class="no-underline text-[20px] text-[#FBFF00]">youtube <span class="ml-1">&#8599;</span></a>
-                    </div>
-                </div>
-            </div>
+                <img src="assets/image_2.png" class="absolute inset-0 w-full h-full object-cover" alt="" />
 
-            <img src="assets/image_1.png" class="absolute inset-0 w-full h-full object-cover" alt="" />
+                <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
+            </section>
+        </swiper-slide>
+    </swiper-container>
 
-            <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
-        </section>
 
-        <section class="h-screen snap-start flex flex-col text-white relative hidden lg:flex" id="third-screen">
-            <div class="relative z-10 w-full flex flex-col px-10">
-                <div
-                        class="w-full lg:w-1/2 flex pb-[100px] lg:pb-0 h-auto lg:h-full font-normal text-3xl lg:text-6xl max-w-[570px] text-left md:pt-[150px] 2xl:pt-[250px]">
-                    want to collaborate feature or explore more?
-                </div>
-            </div>
-
-            <div class="pt-[100px] 2xl:pt-[180px] z-10 w-full px-10 text-[#FBFF00]">
-                <a href="mailto:colabel@collaba.music" target="_blank" rel="noopener noreferrer"
-                   class="font-normal text-3xl lg:text-6xl">
-                    colabel@collaba.music
-                </a>
-            </div>
-
-            <img src="assets/image_2.png" class="absolute inset-0 w-full h-full object-cover" alt="" />
-
-            <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
-        </section>
-    </div>
 
     <script type="module" src="/src/index.js"></script>
 </body>

@@ -31,8 +31,8 @@ export default function () {
   setInterval(showNextVariant, 5000);
 
 // Меняем цвета меню на втором экране
-  const sections = document.querySelector('.sections');
-  function updateMenuColor() {
+  const swiper = document.querySelector('.sections');
+  function updateMenuColor(e) {
     const els = [
       document.getElementById("main-menu"),
       document.getElementById("social-menu"),
@@ -40,15 +40,22 @@ export default function () {
       document.getElementById("logo"),
     ]
 
-    console.log(sections.scrollTop, window.innerHeight - 10);
+    const [swiper] = e.detail;
 
-    if (sections.scrollTop >= window.innerHeight - 10) {
-      els.forEach(el => el.classList.add("white-menu"));
+    if(!swiper) {
+      return;
+    }
+
+    if (swiper.activeIndex !== 0) {
+      els.forEach(el => {
+        el.classList.add("white-menu")
+        console.log(el.classList);
+      });
     } else {
       els.forEach(el => el.classList.remove("white-menu"));
     }
   }
-  sections.addEventListener("scroll", updateMenuColor);
+  swiper.addEventListener('sections-slidechange', updateMenuColor);
 
   window.addEventListener('load', () => {
     const container = document.getElementById('random_imgs');

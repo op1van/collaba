@@ -1,5 +1,5 @@
-import scrollSectionsAnim from "./js-modules/scroll-sections-anim.js";
+import swiperInit from "./js-modules/swiper-init";
 import animationTextFade from "./js-modules/animation-text-fade.js";
 
-scrollSectionsAnim();
+swiperInit();
 animationTextFade();
