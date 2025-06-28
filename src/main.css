@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "./style.css";
+
+.noise {
+    background: transparent url("../assets/noise.png") repeat 0 0;
+    animation: steps(2) bg-animation 5s infinite;
+}
+
+#logo.white {
+    filter: invert(1) brightness(2);
+}
+
+.snap-section {
+    height: 100vh;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
