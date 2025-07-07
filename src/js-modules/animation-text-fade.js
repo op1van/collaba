@@ -30,36 +30,9 @@ export default function () {
   showNextVariant();
   setInterval(showNextVariant, 5000);
 
-// Меняем цвета меню на втором экране
-  const swiper = document.querySelector('.sections');
-  function updateMenuColor(e) {
-    const els = [
-      document.getElementById("main-menu"),
-      document.getElementById("social-menu"),
-      document.getElementById("bottom-links"),
-      document.getElementById("logo"),
-    ]
-
-    const [swiper] = e.detail;
-
-    if(!swiper) {
-      return;
-    }
-
-    if (swiper.activeIndex !== 0) {
-      els.forEach(el => {
-        el.classList.add("white-menu")
-        console.log(el.classList);
-      });
-    } else {
-      els.forEach(el => el.classList.remove("white-menu"));
-    }
-  }
-  swiper.addEventListener('sections-slidechange', updateMenuColor);
-
-  window.addEventListener('load', () => {
-    const container = document.getElementById('random_imgs');
-    const images = Array.from(container.querySelectorAll('img'));
+  window.addEventListener("load", () => {
+    const container = document.getElementById("random_imgs");
+    const images = Array.from(container.querySelectorAll("img"));
     const containerWidth = container.clientWidth;
     const containerHeight = container.clientHeight;
     const size = 64; // размер картинок в px
@@ -68,7 +41,7 @@ export default function () {
     const zones = [
       { xMin: 0, xMax: containerWidth / 3 - size },
       { xMin: containerWidth / 3, xMax: (2 * containerWidth) / 3 - size },
-      { xMin: (2 * containerWidth) / 3, xMax: containerWidth - size }
+      { xMin: (2 * containerWidth) / 3, xMax: containerWidth - size },
     ];
 
     images.forEach((img, i) => {

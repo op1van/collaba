@@ -18,10 +18,21 @@ body::-webkit-scrollbar {
 }
 
 /* Белое меню на черном фоне */
-.white-menu a,
-.white-menu span,
-.white-menu {
+.white-menu .white-on-scroll a,
+.white-menu .white-on-scroll a {
     color: #fff;
+}
+
+.white-menu img.white-on-scroll {
+    filter: invert(1) brightness(2);
+}
+
+label[for="menu-toggle"] div {
+    background-color: #000;
+}
+
+.white-menu label[for="menu-toggle"] div {
+    background-color: #FFF;
 }
 
 .marquee-container {
@@ -55,22 +66,4 @@ body::-webkit-scrollbar {
     100% {
         transform: translateX(-50%);
     }
-}
-
-.bottom-center-text {
-    position: absolute;
-    left: 50%;
-    bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 64px;
-    font-weight: normal;
-    color: #111;
-    line-height: 1.05;
-    background: transparent;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 1;
-    transition: opacity 0.8s;
 }
