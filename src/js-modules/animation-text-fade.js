@@ -17,9 +17,9 @@ export default function () {
     setTimeout(() => {
       const pick = variants[currentVariant];
       container.innerHTML = `
-                <div>${pick[0]}</div>
-                <div>${pick[1]}</div>
-                <div>${pick[2]}</div>
+                <div class="w-full">${pick[0]}</div>
+                <div class="w-full">${pick[1]}</div>
+                <div class="w-full">${pick[2]}</div>
             `;
       currentVariant = (currentVariant + 1) % variants.length;
       container.style.opacity = 1;
