@@ -49,15 +49,15 @@
                     </label>
 
                     <div class="flex flex-col p-10 pb-4 sm:pb-10 h-full">
-                        <a href="#first-screen" class="mb-6 text-2xl mt-auto">start</a>
-                        <a href="#second-screen" class="mb-6 text-2xl">what is cllb</a>
-                        <a href="#third-screen" class="mb-6 text-2xl">contacts</a>
+                        <a href="#" class="mb-6 text-2xl mt-auto">start</a>
+                        <a href="#" class="mb-6 text-2xl">what is cllb</a>
+                        <a href="#" class="mb-6 text-2xl">contacts</a>
 
                         <div class="h-[20px] sm:h-[40px]"></div>
 
-                        <a href="https://www.instagram.com/cllllllllllllb/" class="mb-6 text-2xl">instagram</a>
-                        <a href="https://soundcloud.com/collaba-707243403" class="mb-6 text-2xl">soundcloud</a>
-                        <a href="https://www.youtube.com/@cllllllllllllb" class="mb-6 text-2xl">youtube</a>
+                        <a href="#" class="mb-6 text-2xl">instagram</a>
+                        <a href="#" class="mb-6 text-2xl">soundcloud</a>
+                        <a href="#" class="mb-6 text-2xl">youtube</a>
 
                         <div class="flex flex-col mt-auto">
                             <a href="https://airtable.com/appl031MqyAXR5RdM/shry6JW7YIlSl8zGc"
@@ -74,6 +74,7 @@
             </div>
         </div>
 
+        <!-- DESKTOP SOCIALS -->
         <div class="absolute top-0 right-0 px-10 py-4 flex items-center pointer-events-auto">
             <nav class="flex z-[100] transition-colors duration-400 white-on-scroll">
                 <div class="hidden lg:flex gap-8">
@@ -87,6 +88,7 @@
             </nav>
         </div>
 
+        <!-- BOTTOM LEFT -->
         <div class="absolute bottom-0 left-0 px-10 py-4 pointer-events-auto">
             <div class="hidden lg:flex gap-[30px] z-[100] text-[17px] transition-colors duration-400 white-on-scroll">
                 <a href="mailto:colabel@collaba.music"
@@ -100,16 +102,18 @@
             </div>
         </div>
 
+        <!-- LOGO -->
         <div class="absolute bottom-0 right-0 px-10 py-4 hidden lg:flex pointer-events-auto">
             <img alt="" src="assets/cllb.png" class="h-[60px] white-on-scroll" id="logo" />
         </div>
     </div>
 
     <swiper-container init="false">
-        <!-- Первый экран -->
+        <!-- FIRST SCREEN -->
         <swiper-slide>
             <section class="h-svh flex items-center justify-center scroll-section py-10" id="first-screen">
                 <main class="w-screen h-svh pointer-events-none relative overflow-hidden pt-10">
+
                     <div
                         class="absolute left-10 top-[200px] flex flex-col text-[32px] lg:text-[64px] text-[#111] leading-[1.05]">
                         <div>feeeling</div>
@@ -126,25 +130,40 @@
 
                     <div class="marquee-container top-[217px] lg:top-[267px]">
                         <div class="marquee text-[32px] lg:text-[64px]">
-                            over over over over over over over over over over
+                            over over over over over over over over over over over over over
                         </div>
                     </div>
 
+                    <div id="dynamic-text"
+                        class="absolute right-10 lg:left-1/2 top-[360px] lg:bottom-6 lg:top-auto text-[32px] lg:text-[64px] text-[#111] leading-[1.05] z-20 pointer-events-none">
+                    </div>
+
                     <div
-                        class="absolute bottom-[40px] sm:bottom-[90px] md:bottom-20 left-10 max-w-[550px] text-[16px] leading-[20px] text-[#222]">
+                        class="absolute bottom-[40px] sm:bottom-[90px] md:bottom-20 left-10 max-w-[550px] text-[16px] leading-[20px] text-[#222] z-[2]">
                         <p>collaba is a music</p>
                         <p>community</p>
                         <p>label</p>
                     </div>
+
+                    <!-- RANDOM IMAGES -->
+                    <div id="random_imgs" class="h-full hidden lg:block">
+                        <img src="assets/top_image_1.png"
+                            class="absolute w-[300px] h-[225px] object-cover opacity-50" />
+                        <img src="assets/top_image_2.png"
+                            class="absolute w-[300px] h-[225px] object-cover opacity-50" />
+                        <img src="assets/top_image_3.png"
+                            class="absolute w-[300px] h-[225px] object-cover opacity-50" />
+                    </div>
+
                 </main>
             </section>
         </swiper-slide>
 
-        <!-- Второй экран -->
+        <!-- SECOND SCREEN -->
         <swiper-slide>
             <section class="h-svh flex relative scroll-section py-10" id="second-screen">
                 <div
-                    class="relative z-10 h-full w-full flex flex-col lg:flex-row justify-between px-10 lg:pt-[250px] md:pt-[125px]">
+                    class="relative z-10 h-full w-full flex flex-col lg:flex-row items-center justify-between px-10 lg:pt-[250px] md:pt-[125px]">
                     <div class="w-full lg:w-1/2">
                         <p class="text-3xl max-w-[264px]">
                             collaba is a music community label
@@ -156,24 +175,25 @@
                             artist management, distribution, and curation — powered by a diy ecosystem
                         </p>
                         <p>
-                            no kpis, no majors. just real music
+                            we release strange, raw, unconventional sounds — and give them status
                         </p>
                         <p>
-                            this isn’t a platform. it’s a culture
+                            this isn’t a platform. it’s a movement
                         </p>
                     </div>
                 </div>
 
                 <img src="assets/image_1.png" class="absolute inset-0 w-full h-full object-cover" alt="" />
+                <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
             </section>
         </swiper-slide>
 
-        <!-- Третий экран -->
+        <!-- THIRD SCREEN -->
         <swiper-slide>
             <section class="h-svh flex flex-col relative scroll-section py-10" id="third-screen">
                 <div class="z-10 px-10 my-auto">
                     <div class="text-3xl lg:text-6xl max-w-[570px]">
-                        want to collaborate or explore more?
+                        want to collaborate feature or explore more?
                     </div>
                 </div>
 
@@ -186,17 +206,18 @@
                 <div class="flex lg:hidden w-full z-10 flex-col mt-auto mb-10 px-10 gap-y-10">
                     <div class="flex w-full justify-between">
                         <a href="https://www.instagram.com/cllllllllllllb/"
-                            class="text-[20px] text-[#FBFF00]">instagram ↗</a>
+                            class="text-[20px] text-[#FBFF00]">instagram <span class="ml-1">&#8599;</span></a>
                         <a href="https://soundcloud.com/collaba-707243403"
-                            class="text-[20px] text-[#FBFF00]">soundcloud ↗</a>
+                            class="text-[20px] text-[#FBFF00]">soundcloud <span class="ml-1">&#8599;</span></a>
                     </div>
                     <div class="flex w-full justify-end">
                         <a href="https://www.youtube.com/@cllllllllllllb"
-                            class="text-[20px] text-[#FBFF00]">youtube ↗</a>
+                            class="text-[20px] text-[#FBFF00]">youtube <span class="ml-1">&#8599;</span></a>
                     </div>
                 </div>
 
                 <img src="assets/image_2.png" class="absolute inset-0 w-full h-full object-cover" alt="" />
+                <div class="noise pointer-events-none absolute inset-0 z-40 h-screen w-screen opacity-65"></div>
             </section>
         </swiper-slide>
     </swiper-container>
